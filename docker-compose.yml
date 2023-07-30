@@ -1,0 +1,13 @@
+services:
+  lili-landing-app:
+    build: .
+    container_name: lili-landing-app
+    command: python /app/start.py
+    restart: always
+    ports:
+      - 7000:5000
+    env_file:
+      - .env
+    volumes:
+      - ./root/:/app/root/
+      - ./start.py:/app/start.py

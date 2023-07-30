@@ -1,0 +1,3 @@
+- add robots.txt
+- buy design
+- implement design

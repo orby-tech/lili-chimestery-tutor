@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Репетитор по химии</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Репетитор по химии онлайн" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title is-3">Репетитор по химии</h1>
+    </header>
+    <main>
+      <section class="content">
+        Привет, мой друг 👋
+        <br />
+        Меня зовут Лиля и я репетитор по химии. Занимаюсь с 2015 года.
+        <br />
+        За это время подготовила более 120 ребят к государственным экзаменам.
+        Помогу подготовиться к экзаменам, университету и олимпиадам.
+        <br />
+        И еще большему количеству ребят помогла в понимании предмета, а не
+        просто зубрежке.
+      </section>
+      <section class="content">
+        <h2 class="title is-5">Задачи</h2>
+        <ul>
+          <li>Помощь в понимании предмета, а не просто зубрежка</li>
+          <li>Подготовка к государственным экзаенам</li>
+          <li>Подготовка к университету</li>
+          <li>Подготовка к олимпиадам</li>
+        </ul>
+      </section>
+      <section class="content">
+        <h2 class="title is-5">Обо мне</h2>
+        <ul>
+          <li>
+            За 6 лет работы подготовила больше 120 ребят к государственным
+            экзаенам
+          </li>
+          <li>
+            Онлайн занятия, что позволит быть ученику в комфортной атмосфере
+          </li>
+          <li>
+            Индивидуальный подход к каждому, что позволяет найти решение любой
+            проблемы
+          </li>
+        </ul>
+      </section>
+      <section class="content">
+        <h2 class="title is-5">Как проходят занятия?</h2>
+        <p>
+          Занятия проходят в онлайн формате на платформе Zoom, что позволяет
+          быть ученику в комфортной атмосфере во время занятия.
+        </p>
+        <p>
+          Все записи ведутся на удобнейшей доске Miro, что позволяет
+          возвращаться к материала в любое время.
+        </p>
+        <p>
+          Все материалы, которые используются на занятиях, являются авторскими
+          или тщательно проверены, что позволяет ученику быть уверенным в том,
+          что он получает актуальную информацию.
+        </p>
+      </section>
+
+      <section class="content">
+        <h2 class="title is-5">Оставте любой контакт для связи</h2>
+
+        <div class="form-row">
+          <label for="username">Как к вам обращаться?</label>
+          <input
+            class="input"
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Как к вам обращаться?"
+          />
+        </div>
+
+        <h3 class="title is-7">И хотя бы один контакт</h3>
+
+        <div class="form-row">
+          <label for="whatsapp">WhatsApp:</label>
+          <input
+            class="input"
+            id="whatsapp"
+            name="whatsapp"
+            type="number"
+            placeholder="WhatsApp"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="telegram">Telegram:</label>
+          <input
+            class="input"
+            id="telegram"
+            name="telegram"
+            type="text"
+            placeholder="Telegram"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="email">E-mail:</label>
+          <input
+            class="input"
+            id="email"
+            name="email"
+            type="text"
+            placeholder="email"
+          />
+        </div>
+
+        <button class="button is-primary" id="submit-form" disabled>
+          Отправить
+        </button>
+      </section>
+
+      <section class="content">
+        <h2 class="title is-5">Или напишите первыми</h2>
+        <ul class="">
+          <li>
+            <a href="https://wa.me/79600766476">WhatsApp</a>: +7 999 999 99 99
+          </li>
+          <li>
+            <a href="mailto:tibode495@gmail.com"> Почта</a>: tibode@gmail.com
+          </li>
+          <li><a href="https://t.me/orby_tech"> Telegram</a>: @lili</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      width: 100%;
+    }
+    section {
+      margin: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <script>
+    let formState = {
+      username: "",
+      whatsapp: "",
+      telegram: "",
+      email: "",
+    };
+
+    document.getElementById("username").addEventListener("input", (e) => {
+      formState.username = e.target.value;
+      toggleDisabled();
+    });
+
+    document.getElementById("whatsapp").addEventListener("input", (e) => {
+      formState.whatsapp = e.target.value;
+      toggleDisabled();
+    });
+
+    document.getElementById("telegram").addEventListener("input", (e) => {
+      formState.telegram = e.target.value;
+      toggleDisabled();
+    });
+
+    document.getElementById("email").addEventListener("input", (e) => {
+      formState.email = e.target.value;
+      toggleDisabled();
+    });
+
+    const toggleDisabled = () => {
+      const submitButton = document.getElementById("submit-form");
+      if (
+        formState.username &&
+        (formState.whatsapp || formState.telegram || formState.email)
+      ) {
+        submitButton.removeAttribute("disabled");
+      } else {
+        submitButton.setAttribute("disabled", true);
+      }
+    };
+
+    document.getElementById("submit-form").addEventListener("click", () => {
+      const username = document.getElementById("username").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+      const telegram = document.getElementById("telegram").value;
+      const email = document.getElementById("email").value;
+
+      if (!username) {
+        alert('Пожалуйста, заполните поле "Как к вам обращаться"');
+        return;
+      }
+
+      if (!whatsapp && !telegram && !email) {
+        alert("Пожалуйста, заполните хотя бы одно поле контакта");
+        return;
+      }
+
+      const data = {
+        username,
+        whatsapp,
+        telegram,
+        email,
+      };
+
+      fetch("/save-contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    });
+  </script>
+</html>
